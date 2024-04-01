@@ -45,6 +45,5 @@ jobs:
       package_test_command: "${{ inputs.package_test_command }}"
       dbms_name: "redshift"
       ref: "${{ inputs.ref }}"
-      org: "dbt-labs"
 
     secrets: "inherit"
