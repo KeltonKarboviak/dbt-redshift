@@ -38,12 +38,13 @@ jobs:
   invoke-reusable-workflow:
     name: "Build and Release Internally"
 
-    uses: "dbt-labs/dbt-release/.github/workflows/internal-archive-release.yml@main"
+    uses: "dbt-labs/dbt-release/.github/workflows/internal-archive-release.yml@mp/add-maintainer-workflows"
 
     with:
       version_number: "${{ inputs.version_number }}"
       package_test_command: "${{ inputs.package_test_command }}"
       dbms_name: "redshift"
       ref: "${{ inputs.ref }}"
+      org: "dbt-labs"
 
     secrets: "inherit"
